@@ -9,7 +9,7 @@ _/help en_
 end
 return {
  patterns = {
-"^/start",
+"^/start$",
 },
  run = run
  }
