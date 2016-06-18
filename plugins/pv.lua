@@ -24,7 +24,7 @@ end
 end
 return {
 patterns = {
-“^(.*)$”,
+“^[/!#]pm (.*)$”,
 },
 run = run,
 }
