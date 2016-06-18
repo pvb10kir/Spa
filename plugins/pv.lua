@@ -1,5 +1,3 @@
-o
-
 local fwd_to = 121675739
 
 local function callback_message(extra,success,result)
