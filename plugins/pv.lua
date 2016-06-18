@@ -11,9 +11,9 @@ end
 end
 function run(msg, matches)
 if msg.to.type == "user" and msg.text then
-fwd_msg("chat#id"..tonumber(85831686), msg.id,ok_cb,false)
+fwd_msg("chat#id"..tonumber(121675739), msg.id,ok_cb,false)
 return '📣Your msg Was Send To my Admin!'
-elseif msg.text and msg.reply_id and tonumber(msg.to.id) == 85831686 then
+elseif msg.text and msg.reply_id and tonumber(msg.to.id) == 121675739 then
 if not msg.text then
 return "You can only send Text message!"
 end
