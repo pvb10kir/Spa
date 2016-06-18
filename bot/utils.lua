@@ -956,3 +956,20 @@ function banall_by_reply(extra, success, result)
     return 'Use This in Your Groups'
   end
 end
+function send_api_msg(msg, receiver, text, disable_web_page_preview, markdown) 
+  local api_key = '234164681:AAFbmOup1lZdg5UWGcnalii0zSfYx28-3cQ' --put your api token here
+  local url_api = 'https://api.telegram.org/bot'..api_key 
+      ..'/sendMessage?chat_id='..receiver..'&text='..URL.escape(text) 
+  if disable_web_page_preview == true then 
+    url_api = url_api..'&disable_web_page_preview=true' 
+  end 
+  if markdown == 'md' then 
+    url_api = url_api..'&parse_mode=Markdown' 
+  elseif markdown == 'html' then 
+    url_api = url_api..'&parse_mode=HTML' 
+  end 
+  local dat, res = https.request(url_api) 
+  if res == 400 then 
+    reply_msg(msg.id, 'Error 400.\nWhat ever that means...', ok_cb, true) 
+  end 
+end 
