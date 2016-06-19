@@ -1,5 +1,5 @@
 local function run(msg)
-local text = [[*Hi* "..msg.from.print_name.."
+local text = [[*Hi My Friend*
 *Thanks For Start Me*
 *You Can Use*
 _/help fa_
