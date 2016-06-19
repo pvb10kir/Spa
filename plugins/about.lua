@@ -5,7 +5,7 @@ local function run(msg,matches)
     local link_text = '' 
     local data = load_data(_config.moderation.data) 
     local link = 'https://telegram.me/spherochbot'
-    local keyboard = '{"inline_keyboard":[[{"text":"Sphero Channel","url":"https://telegram.me/Spheroch"}],[{"text":"Developer","url":"http://telegram.me/mrblacklife"},{"text":"Sphero AntiSpam","url":"http://telegram.me/Sphero"},{"text":"My Dev Github","url":"http://github.com/3pehrdev"}]]}' --به دلخواه متن ها را تغییر دهید 
+    local keyboard = '{"inline_keyboard":[[{"text":"Sphero Channel","url":"https://telegram.me/Spheroch"},,{"text":"My Dev Github","url":"http://github.com/3pehrdev"}],[{"text":"Developer","url":"http://telegram.me/mrblacklife"},{"text":"Sphero AntiSpam","url":"http://telegram.me/Sphero"}]]}' --به دلخواه متن ها را تغییر دهید 
     local url = 'https://api.telegram.org/bot'..api_key..'/sendMessage?chat_id='..channel_id..'&parse_mode=Markdown&text='..text..'&disable_web_page_preview=true&reply_markup='..keyboard 
     local dat, res = https.request(url) 
       if res == 400 then 
