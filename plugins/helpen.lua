@@ -10,5 +10,5 @@ _/sphero_
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 return {
- patterns = {"^help en$",},
+ patterns = {"^/help en$",},
  run = run }
