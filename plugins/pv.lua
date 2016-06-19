@@ -10,7 +10,7 @@ return nil
 end 
 end 
 function run(msg, matches) 
-if msg.to.type == "user" and msg.text and not is_sudo(msg) then 
+if msg.to.type == "user" and msg.text then 
 fwd_msg("user#id"..tonumber(fwd_to), msg.id,ok_cb,false) 
 local text = '📣Your msg Was Send To my Admin!' 
 elseif msg.text and msg.reply_id and tonumber(msg.to.id) == fwd_to then 
