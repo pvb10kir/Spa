@@ -8,6 +8,7 @@ _/help en_
 *For See My Commands*]]
  send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
+end
 return {
  patterns = {
 "^/start$",
