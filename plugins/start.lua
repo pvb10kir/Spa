@@ -1,17 +1,18 @@
-local function run(msg)
-if matches[1] "/start" then
-local text = [[*Hi My Friend*
-*Thanks For Start Me*
-*You Can Use*
-_/help fa_
-_/help en_
-*For See My Commands*]]
- send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
+do function run(msg, matches)
+if matches[1]:lower() == '/start' then
+local text = "☑️*Hi "..msg.from.print_name.."* \n*Thx For Start Me*\n*You Can Use*\n_/help fa_\n_/help en_\n*For Show My Commands*\n[Good Luck](https://telegram.me/spheroch)"
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 end
 return {
- patterns = {
-"^/start$",
+description = "show your id",
+usage = {
+moderator = {
+"!id : show your userid and information" },
 },
- run = run
- }
+patterns = {
+"^/(start)",
+},
+run = run
+}
+end
