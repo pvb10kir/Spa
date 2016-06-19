@@ -1,6 +1,6 @@
 do   
 
-local fwd_to = 85831686
+local fwd_to = 141780611
 
 local function callback_message(extra,success,result)
 local receiver = result.to.id
@@ -13,7 +13,7 @@ local msg = extra
   end
 function run(msg, matches) 
   if msg.to.type == "user" and msg.text then
-fwd_msg("user#id"..tonumber(fwd_to), msg.id,ok_cb,false)
+fwd_msg("chat#id"..tonumber(fwd_to), msg.id,ok_cb,false)
   return 'msg sent !'
 elseif msg.text and msg.reply_id and tonumber(msg.to.id) == fwd_to then
     if not msg.text then
