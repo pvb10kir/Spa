@@ -54,9 +54,9 @@ end
 
 return {
   patterns = {
-    "^[/#!]sticker (.+) (.+) (.+)$",
-    "^[/#!]sticker (.+) (.+)$",
-    "^[/#!]sticker (.+)$"
+    "^[/#!]sticker1 (.+) (.+) (.+)$",
+    "^[/#!]sticker1 (.+) (.+)$",
+    "^[/#!]sticker1 (.+)$"
   },
   run = run
 }
