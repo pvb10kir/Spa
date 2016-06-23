@@ -1,6 +1,6 @@
 do function run(msg, matches)
 if matches[1]:lower() == '/time' then
-local text = "*Iran Time Now👆*"
+local text = "*Iran Time Now👇*"
 send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 end
