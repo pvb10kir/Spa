@@ -9,7 +9,9 @@ local text = [[`راهنمای ربات:
 متن به استیکر:
 /sticker[۱-۵] [رنگ] [سایز] [متن]
 /sticker[۱-۵] [سایز] [متن]
-/sticker[۱-۵] [متن]`
+/sticker[۱-۵] [متن]
+نمایش ساعت ایران:
+/time`
 [موفق باشید](https://telegram.me/spheroch)]]
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
