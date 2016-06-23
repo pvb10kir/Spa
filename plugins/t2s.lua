@@ -1,6 +1,6 @@
 do
 local function run(msg, matches)
---Created by @LionTeam
+
   local lionteam = URL.escape(matches[1])
   local size = '150'
         if matches[2] == 'big' then
@@ -42,11 +42,11 @@ local function run(msg, matches)
     elseif matches[3] then
         f = matches[3]
         end
-  local url = "http://assets.imgix.net/examples/mountain.jpg?blur=120&w=700&h=400&fit=crop&txt="..lionteam.."&txtsize="..size.."&txtclr="..f.."&txtalign=middle,center&txtfont=Futura%20Condensed%20Medium&mono=ff6598cc=?markscale=60&markalign=center%2Cdown&mark64=aHR0cDovL2xpb250ZWFtLmlyL2ltZy9zcGVjdHJlbG9nby5wbmc"
+  local url = "http://assets.imgix.net/examples/vista.png?w=120&w=700&h=400&fit=crop&txt="..lionteam.."&txtsize="..size.."&txtclr="..f.."&txtalign=middle,center&txtfont=Futura%20Condensed%20Medium&mono=ff6598cc=?markscale=60&markalign"
   local ext = ".webp"
   local cb_extra = {file_path=file}
 
---Created by LionTeam
+
   local receiver = get_receiver(msg)
   local file = download_to_file(url, ".webp")
   send_document(receiver, file, rmtmp_cb, cb_extra)
@@ -56,7 +56,8 @@ return {
   patterns = {
     "^[/#!]sticker (.+) (.+) (.+)$",
     "^[/#!]sticker (.+) (.+)$",
-    "^[/#!]sticker (.+)$",
+    "^[/#!]sticker (.+)$"
+  },
   run = run
 }
 
