@@ -6,6 +6,10 @@ _/pm (msg)_
 _/about_
 *Spherobot:*
 _/sphero_
+*Text To Sticker:*
+_/sticker[1-5] [text] [size] [color]_
+_/sticker[1-5] [text] [size]_
+_/sticker[1-5] [text]_
 [Good Luck!](https://telegram.me/spheroch)]]
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
