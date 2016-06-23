@@ -10,6 +10,8 @@ _/sphero_
 _/sticker[1-5] [text] [size] [color]_
 _/sticker[1-5] [text] [size]_
 _/sticker[1-5] [text]_
+*Show iran Time:*
+_/time_
 [Good Luck!](https://telegram.me/spheroch)]]
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
