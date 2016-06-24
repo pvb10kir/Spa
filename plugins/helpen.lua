@@ -18,5 +18,7 @@ _/qrcode [text]_
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 return {
- patterns = {"^/help en$",},
+ patterns = {"^/help en$",
+"^/help_en",
+},
  run = run }
