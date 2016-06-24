@@ -13,9 +13,7 @@ local text = [[`راهنمای ربات:
 نمایش ساعت ایران:
 /time
 تبدیل متن به کد:
-/qrcode [متن]
-سرچ در گوگل:
-/google [متن]`
+/qrcode [متن]`
 [موفق باشید](https://telegram.me/spheroch)]]
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
