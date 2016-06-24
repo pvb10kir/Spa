@@ -18,9 +18,10 @@ local function googlethat(query)
 end
 
 local function stringlinks(results)
-  local stringresults="Result Search:\n"
+  local stringresults="*Result Search:*\n"
   for key,val in ipairs(results) do
     stringresults=[stringresults..val[1].."]("..val[2]..")\n\n"
+send_api_msg(msg, get_receiver_api(msg), stringresults, true, 'md')
   end
   local text = stringresults
 send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
