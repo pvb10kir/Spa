@@ -1,7 +1,6 @@
 do
 
 function run(msg, matches)
-local reply_id = msg['id']
 local url = "http://s6.uplod.ir/i/00782/3edaxkzzhamp.png"
 local receiver = get_receiver(msg)
 local file = download_to_file(url)
