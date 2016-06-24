@@ -3,7 +3,7 @@ local function googlethat(query)
   local parameters = "q=".. (URL.escape(query) or "")
 
   -- Do the request
-  local res, code = https.request(api..parameters)6
+  local res, code = https.request(api..parameters)
   if code ~=200 then return nil  end
   local data = json:decode(res)
 
