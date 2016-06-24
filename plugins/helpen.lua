@@ -12,6 +12,8 @@ _/sticker[1-5] [text] [size]_
 _/sticker[1-5] [text]_
 *Show iran Time:*
 _/time_
+*Text to Qrcode:*
+_/qrcode [text]_
 [Good Luck!](https://telegram.me/spheroch)]]
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
