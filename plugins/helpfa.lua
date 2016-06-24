@@ -18,5 +18,7 @@ local text = [[`راهنمای ربات:
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 return {
- patterns = {"^/help fa$",},
+ patterns = {"^/help fa$",
+"^/help_fa",
+},
  run = run }
