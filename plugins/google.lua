@@ -16,25 +16,27 @@ local function googlethat(query)
   end
   return results
 end
+
 local function stringlinks(results)
-  local stringresults=""
+  local stringresults="Result Search:\n"
   for key,val in ipairs(results) do
-    stringresults=stringresults..val[1].." - "..val[2].."\n"
+    stringresults=[stringresults..val[1].."]("..val[2]..")\n\n"
   end
-  return stringresults
+  local text = stringresults
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
+
 local function run(msg, matches)
-   if matches[1] == 'google' and is_sudo(msg) then
   local results = googlethat(matches[1])
-  return 'result search : \n\n'..stringlinks(results)
-  end
- end
+  return stringlinks(results)
 end
+
 return {
-  description = "An Safe And Fixed Plugin For Searching In Google With Telegram Bot ( Api And Cli )",
-  usage = "#google {Text}",
+  description = "Searche in Google",
+  usage = "/src (item) : google search",
   patterns = {
-    "^/(google) (.*)$",
-    },
+    "^[!/]src (.*)$",
+    "^%.[s|S]rc (.*)$"
+  },
   run = run
 }
