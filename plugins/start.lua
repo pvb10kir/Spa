@@ -15,5 +15,5 @@ _/help en_
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 return {
- patterns = {"^/start$",},
+ patterns = {"^/start",},
  run = run }
