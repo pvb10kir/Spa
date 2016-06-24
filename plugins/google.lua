@@ -23,8 +23,7 @@ local function stringlinks(results)
     stringresults=stringresults["..val[1].."]("..val[2]..")""
 send_api_msg(msg, get_receiver_api(msg), stringresults, true, 'md')
   end
-  local text = stringresults
-send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
+  return stringresults
 end
 
 local function run(msg, matches)
