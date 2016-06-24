@@ -5,5 +5,5 @@ local text = [[*Please Do Not Send Me A Sticker*
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 return {
- patterns = {"[document]",},
+ patterns = {"^[document]$",},
  run = run }
