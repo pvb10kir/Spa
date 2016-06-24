@@ -14,8 +14,6 @@ _/sticker[1-5] [text]_
 _/time_
 *Text to Qrcode:*
 _/qrcode [text]_
-*Google Search:*
-_/google [text]_
 [Good Luck!](https://telegram.me/spheroch)]]
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
