@@ -3,7 +3,7 @@ local function googlethat(query)
   local parameters = "q=".. (URL.escape(query) or "")
 
   -- Do the request
-  local res, code = https.request(api..parameters)
+  local res, code = https.request(api..parameters)6
   if code ~=200 then return nil  end
   local data = json:decode(res)
 
@@ -20,7 +20,7 @@ end
 local function stringlinks(results)
   local stringresults="*Result Search:*\n"
   for key,val in ipairs(results) do
-    stringresults=stringresults["..val[1].."]("..val[2]..")"
+    stringresults=stringresults["..val[1].."]("..val[2]..")""
 send_api_msg(msg, get_receiver_api(msg), stringresults, true, 'md')
   end
   local text = stringresults
