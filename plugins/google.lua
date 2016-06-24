@@ -18,10 +18,9 @@ local function googlethat(query)
 end
 
 local function stringlinks(results)
-  local stringresults="*Result Search:*\n"
+  local stringresults="Result Search:\n"
   for key,val in ipairs(results) do
-    stringresults=stringresults[..val[1].."]("..val[2]..")"
-send_api_msg(msg, get_receiver_api(msg), stringresults, true, 'md')
+    stringresults=stringresults..val[1].." - "..val[2].."\n"
   end
   return stringresults
 end
@@ -35,7 +34,7 @@ return {
   description = "Searche in Google",
   usage = "/src (item) : google search",
   patterns = {
-    "^[!/]src (.*)$",
+    "^[*#]src (.*)$",
     "^%.[s|S]rc (.*)$"
   },
   run = run
