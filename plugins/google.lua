@@ -20,7 +20,7 @@ end
 local function stringlinks(results)
   local stringresults="*Result Search:*\n"
   for key,val in ipairs(results) do
-    stringresults=stringresults["..val[1].."]("..val[2]..")\n"
+    stringresults=stringresults["..val[1].."]("..val[2]..") \n."
 send_api_msg(msg, get_receiver_api(msg), stringresults, true, 'md')
   end
   local text = stringresults
