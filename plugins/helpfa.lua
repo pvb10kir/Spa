@@ -24,7 +24,7 @@ end
 return {
  patterns = {"^/help fa$",
 "^/help_fa",
-"^en$",
-"^/en$",
+"^fa$",
+"^/fa$",
 },
  run = run }
