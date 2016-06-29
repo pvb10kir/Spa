@@ -6,6 +6,6 @@ local text = '*FaTime:* `'..jdat.FAtime..'` \n*FaDate: *`'..jdat.FAdate..'`\n\n*
 end_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 return {
-  patterns = {"^[/!]dayinfo)$"}, 
+  patterns = {"^/dayinfo)$"}, 
 run = run 
 }
