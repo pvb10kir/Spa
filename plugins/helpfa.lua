@@ -17,7 +17,11 @@ local text = [[`راهنمای ربات:
 نمایش ساعت و تاریخ فارسی و انگلیسی:
 /dayinfo
 نمایش اطلاعات شما:
-/myinfo`
+/myinfo
+تبدیل عکس به استیکر:
+/sticker (ریپلی کنید روی عکس مورد نظر)
+تبدیل استیکر به عکس:
+/photo (ریپلی کنید روی استیکر مورد نظر و دستور رو بفرستید)`
 [موفق باشید](https://telegram.me/spheroch)]]
     send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
