@@ -1,4 +1,4 @@
-local api_key = '234164681:AAEoLQltAsGrEedHhruQLUKXbcY8dEw7tN4' --توکن ربات خود را اینجا قرار دهید 
+local api_key = '234413399:AAHoaH8E33MRmaSz6C5wzKcGH1oVtoU9OCw' --توکن ربات خود را اینجا قرار دهید 
 local function run(msg,matches) 
     local text = '*More Information Bot:*' 
     local channel_id = get_receiver_api(msg) 
