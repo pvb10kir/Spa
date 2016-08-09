@@ -959,7 +959,7 @@ function get_receiver_api(msg)
   end 
 end 
 function send_api_msg(msg, receiver, text, disable_web_page_preview, markdown) 
-  local api_key = '234164681:AAEoLQltAsGrEedHhruQLUKXbcY8dEw7tN4' --put your api token here
+  local api_key = '234413399:AAHoaH8E33MRmaSz6C5wzKcGH1oVtoU9OCw' --put your api token here
   local url_api = 'https://api.telegram.org/bot'..api_key 
       ..'/sendMessage?chat_id='..receiver..'&text='..URL.escape(text) 
   if disable_web_page_preview == true then 
@@ -972,6 +972,6 @@ function send_api_msg(msg, receiver, text, disable_web_page_preview, markdown)
   end 
   local dat, res = https.request(url_api) 
   if res == 400 then 
-    reply_msg(msg.id, 'Error 400.\nWhat ever that means...', ok_cb, true) 
+    reply_msg(msg.id, 'Error Send Bold Text Failed', ok_cb, true) 
   end 
 end 
