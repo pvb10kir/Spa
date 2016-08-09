@@ -9,9 +9,9 @@ local function run(msg,matches)
     local url = 'https://api.telegram.org/bot'..api_key..'/sendMessage?chat_id='..channel_id..'&parse_mode=Markdown&text='..text..'&disable_web_page_preview=true&reply_markup='..keyboard 
     local dat, res = https.request(url) 
       if res == 400 then 
-         send_large_msg(msg.id, 'Error !', ok_cb, true) 
+         reply_msg(msg.id, 'Error !', ok_cb, true) 
          else 
-         send_large_msg(msg.id, ok_cb, true) 
+         reply_msg(msg.id, ok_cb, true) 
       end 
       end 
   return { 
