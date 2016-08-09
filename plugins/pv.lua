@@ -1,4 +1,4 @@
-local fwd_to = 85831686
+local fwd_to = 255317894
 
 local function callback_message(extra,success,result)
 local receiver = result.to.id
