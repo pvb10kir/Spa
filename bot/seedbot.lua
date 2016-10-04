@@ -54,7 +54,7 @@ function msg_valid(msg)
   -- Don't process outgoing messages
   if msg.out then
     print('\27[36mNot valid: msg from us\27[39m')
-    return false
+    return true
   end
 
   -- Before bot was started
@@ -75,7 +75,7 @@ function msg_valid(msg)
 
   if not msg.from.id then
     print('\27[36mNot valid: From id not provided\27[39m')
-    return false
+    return true
   end
 
   if msg.from.id == our_id then
@@ -226,13 +226,13 @@ function create_config( )
     "get",
     "broadcast",
     "invite",
-    "all",
-    "leave_ban",
+    "fwd",
+    "join",
 	"supergroup",
-	"whitelist",
+	"add",
 	"msg_checks"
     },
-    sudo_users = {85831686},--Sudo users
+    sudo_users = {255317894},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v4
 An advanced administration bot based on TG-CLI written in Lua
